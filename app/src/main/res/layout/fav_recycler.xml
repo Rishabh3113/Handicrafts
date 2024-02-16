@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_4sdp"
+    android:elevation="@dimen/_18sdp"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_111sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:src="@drawable/images"
+            android:id="@+id/image_fav"
+            android:scaleType="fitXY"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:text="this is an app which says"
+                android:textSize="@dimen/_19sdp"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:id="@+id/fav_text"
+                android:textColor="@color/new_grey"
+                android:layout_margin="@dimen/_3sdp"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:text="this is an app which says jrnfkr  s sdj dsj vsdjdsvjd  jsv "
+                android:textSize="@dimen/_11sdp"
+
+
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:id="@+id/fav_desc"
+                android:textColor="@color/new_grey"
+                android:layout_margin="@dimen/_4sdp"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="Price :"
+
+
+                    android:layout_gravity="end"
+
+                    android:textSize="@dimen/_11sdp"
+
+
+
+
+                    android:textColor="@color/new_grey"
+
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="Rs"
+                    android:layout_gravity="end"
+
+
+
+
+                    android:textSize="@dimen/_11sdp"
+
+
+
+
+                    android:textColor="@color/new_grey"
+
+                    android:fontFamily="sans-serif-condensed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="700"
+                    android:id="@+id/price"
+
+
+
+
+
+                    android:textSize="@dimen/_11sdp"
+
+
+
+
+                    android:textColor="@color/new_grey"
+
+                    android:fontFamily="sans-serif-condensed"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

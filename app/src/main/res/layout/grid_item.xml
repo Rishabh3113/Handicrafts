@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bright"
+    android:layout_margin="@dimen/_4sdp"
+    android:layout_height="@dimen/_182sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:elevation="@dimen/_7sdp"
+        android:background="@color/bright"
+        app:cardCornerRadius="@dimen/_3sdp"
+        android:id="@+id/card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:src="@drawable/images"
+                    android:scaleType="fitXY"
+                     />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/faviconImageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="@dimen/_2sdp"
+                     android:layout_gravity="end"
+
+
+
+                    android:src="@drawable/favorite2" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="@dimen/_17sdp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:text="Thungkal painting"
+                android:ellipsize="end"
+                android:id="@+id/heading"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Rs 200"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                    android:id="@+id/discount"
+                    android:textSize="@dimen/_7sdp"
+                    android:textColor="@color/black"
+
+                    android:layout_marginLeft="@dimen/_33sdp"
+                    android:gravity="end"
+                    android:text="25% discount"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/discount"
+                    android:id="@+id/image_disocunt"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

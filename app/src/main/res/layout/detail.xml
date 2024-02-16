@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bright"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/scroll"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageButton
+                   android:layout_width="@dimen/_20sdp"
+                   android:layout_height="@dimen/_20sdp"
+                   android:id="@+id/backed"
+                   android:background="@color/white"
+                   android:src="@drawable/baseline_keyboard_arrow_left_24"/>
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_140sdp"
+                   android:id="@+id/detail_images"
+                   android:src="@drawable/images"
+                   android:scaleType="fitXY"
+                   android:layout_marginTop="@dimen/_20sdp"
+                   />
+
+           </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/_22sdp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/black"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:id="@+id/detail_title"
+                    android:text="Handicrafts items"/>
+
+                <ImageButton
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+
+                    android:id="@+id/fav_detail"
+                    android:background="@color/bright"
+                    android:layout_marginLeft="@dimen/_40sdp"
+
+
+                    android:src="@drawable/favorite2"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:text="Price"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_21sdp"
+                    android:layout_margin="@dimen/_6sdp"/>
+
+                <View
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_7sdp"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:layout_margin="@dimen/_3sdp"
+                    android:src="@drawable/baseline_currency_rupee_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:id="@+id/price"
+                    android:fontFamily="sans-serif-light"
+
+                    android:text="689"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_21sdp" />
+
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_share_24"
+                    android:id="@+id/share"
+                    android:background="@color/bright"
+                    android:layout_gravity="end|fill"
+                    android:layout_marginLeft="@dimen/_110sdp"
+                    />
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_1sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+
+
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <View
+                    android:layout_width="@dimen/_7sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/black"
+
+
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_19sdp"
+                    android:id="@+id/detail_discount"
+                    android:layout_marginLeft="@dimen/_1sdp"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/_40sdp"
+                    app:lottie_autoPlay="true"
+                    android:layout_height="@dimen/_20sdp"
+                    android:id="@+id/lottie"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Details"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:inputType="textMultiLine"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:text="nckdsnvns sdsdnv"
+
+                android:layout_marginRight="@dimen/_12sdp"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:id="@+id/description"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height= "wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                     android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <View
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+             />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Andhra Pradesh"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp"
+                    android:id="@+id/state"
+                     android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height= "wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                   android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <View
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vijaywada"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17sdp"
+                    android:id="@+id/city"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Reviews"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_14sdp"/>
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_13sdp"
+                android:background="@drawable/style_5"
+                android:id="@+id/auto_reviews"
+                />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_1sdp"
+        android:background="@color/white"
+        android:elevation="@dimen/_30sdp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:saveEnabled="true"
+        app:itemIconTint="@color/black"
+        android:pointerIcon="text"
+        android:isScrollContainer="true"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/new_menu"
+        android:id="@+id/navigate"/>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

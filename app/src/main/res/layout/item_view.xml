@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:elevation="@dimen/_12sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:backgroundTint="@color/white"
+
+    android:orientation="vertical"
+android:layout_margin="@dimen/_8sdp"
+    android:id="@+id/card"
+    app:cardUseCompatPadding="true"
+
+
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/images"
+        android:id="@+id/images"
+        android:background="@color/white"
+        android:layout_gravity="start"
+
+
+        android:adjustViewBounds="true"
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/images"
+            android:text="PAINTING"
+
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:id="@+id/sub"/>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

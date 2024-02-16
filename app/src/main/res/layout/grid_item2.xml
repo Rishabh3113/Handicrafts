@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bright"
+    app:cardCornerRadius="@dimen/_4sdp"
+    android:layout_margin="@dimen/_8sdp"
+
+    android:id="@+id/card"
+    android:elevation="@dimen/_4sdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/images"
+                android:scaleType="center"
+                android:id="@+id/profile_image"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/faviconImageView"
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_gravity="end"
+
+
+
+                android:src="@drawable/favorite2" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:text="pen holder af jbe mbdjdb cd chdhd c d cdhd"
+          android:maxLines="1"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:textColor="@color/black2"
+           android:fontFamily="sans-serif-light"
+            android:id="@+id/heading"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_currency_rupee_24"
+                android:id="@+id/icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:text="700"
+                android:id="@+id/price"
+                android:gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-light"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:text="28"
+                android:gravity="center"
+                android:textSize="@dimen/_7sdp"
+                android:id="@+id/discount"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_32sdp"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:text="%"
+                android:gravity="center"
+                android:textSize="@dimen/_7sdp"
+                android:textColor="@color/black"
+
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:text="discount"
+                android:gravity="center"
+                android:textSize="@dimen/_7sdp"
+                android:textColor="@color/black"
+
+                android:fontFamily="sans-serif"/>
+
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/discount"
+                android:id="@+id/image_disocunt"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_2sdp"
+                 />
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+ <androidx.appcompat.widget.SearchView
+     android:id="@+id/search"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+
+     android:layout_margin="@dimen/_10sdp"
+     android:layout_marginStart="@dimen/_5sdp"
+     android:layout_marginTop="@dimen/_5sdp"
+     android:layout_marginEnd="@dimen/_5sdp"
+     android:layout_marginBottom="@dimen/_5sdp"
+     android:background="@drawable/style"
+     android:hint="Search item here"
+     android:queryHint="Search here"
+     android:textColorHint="@color/black"
+     android:text="Search here"
+
+
+     app:iconifiedByDefault="false"
+     app:searchIcon="@drawable/baseline_search_24"
+
+     />
+
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/_3sdp"
+         
+         android:id="@+id/space"/>
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+          android:layout_below="@+id/search"
+          >
+          
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginTop="@dimen/_9sdp"
+           android:layout_margin="@dimen/_13sdp"
+           android:layout_marginBottom="@dimen/_8sdp"
+
+            android:orientation="vertical">
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_2sdp"
+               android:background="@color/black"/>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+
+                 android:text="Arunachal Handicrafts "
+                 android:textSize="@dimen/_18sdp"
+                 android:textStyle="normal"
+                 android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:clipToPadding="false"
+
+                android:layout_height="wrap_content"
+           android:orientation="horizontal"
+                 android:id="@+id/arunachal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+
+                 android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nagaland Handricrafts"
+                android:layout_marginTop="@dimen/_5sdp"
+              android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_3sdp"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/nagaland"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assam Handricrafts"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/assam"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gujarat Handicrafts"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/punjab"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Odisha Handicrafts"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/odisha"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kerala Handricrafts"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="@dimen/_5sdp"
+
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/kerala"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kashmir Handricrafts"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/kashmir"/>
+
+
+
+
+
+
+
+
+                 
+            
+            
+            
+            
+            
+            
+       </LinearLayout>
+               
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+     </ScrollView>
+         
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

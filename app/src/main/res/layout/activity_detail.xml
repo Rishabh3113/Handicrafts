@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bright"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/layout">
+
+        <ImageButton
+            android:id="@+id/icons"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:backgroundTint="@color/bright"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New Address"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_8sdp"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="23dp"
+        android:id="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="@color/grey"
+        android:text="Pick address on maps" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/relative">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:text="Name"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@drawable/style_4"
+            android:id="@+id/add_name"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:text="Address"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:boxBackgroundColor="@color/bright"
+
+
+            android:id="@+id/address">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/style_4"
+                android:gravity="start"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:inputType="textMultiLine"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/relative4"
+        android:layout_below="@id/relative1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textStyle="normal"
+                android:text="State"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@drawable/style_4"
+                android:id="@+id/pin"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:text="City"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@drawable/style_4"
+                android:id="@+id/state">
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:backgroundTint="@color/black"
+                    android:id="@+id/spinner"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_below="@id/relative4"
+        android:id="@+id/relative_5"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:text="Pin code *"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@drawable/style_4"
+                android:id="@+id/code"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:text="Contact "/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="@drawable/style_4"
+                android:id="@+id/phone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@id/relative_5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:backgroundTint="@color/grey"
+        android:text="Save "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_23sdp"
+        app:cornerRadius="@dimen/_10sdp" />
+
+
+
+
+
+
+</RelativeLayout>

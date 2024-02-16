@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+
+    android:layout_height="wrap_content"
+
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/card1"
+      android:backgroundTint="@color/white"
+      android:padding="@dimen/_3sdp"
+
+      android:background="@color/white"
+
+      android:elevation="@dimen/_20sdp"
+   app:cardCornerRadius="@dimen/_6sdp"
+
+
+
+
+      >
+
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+      <ImageView
+          android:layout_width="@dimen/_150sdp"
+          android:layout_height="@dimen/_150sdp"
+          android:src="@drawable/images"
+          app:civ_circle_background_color="@color/black"
+           android:fitsSystemWindows="true"
+          android:scaleType="center"
+          android:layout_centerHorizontal="true"
+          android:layout_gravity="center"
+          android:id="@+id/circular"
+          />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/circular"
+          android:text="Arunachal Pradesh"
+
+          android:layout_margin="@dimen/_5sdp"
+          android:textColor="@color/black"
+          android:layout_gravity="bottom"
+          android:layout_centerHorizontal="true"
+          android:fontFamily="monospace"
+          android:textSize="@dimen/_13sdp"
+          android:textStyle="bold"
+          android:id="@+id/cat_text"/>
+
+      </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+  </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

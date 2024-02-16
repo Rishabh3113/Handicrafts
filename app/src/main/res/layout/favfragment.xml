@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bright"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:tabSelectedTextColor="@color/new_grey"
+        app:tabIconTint="@color/black2"
+        app:tabIndicatorGravity="bottom"
+     app:tabIndicatorColor="@color/new_grey"
+        android:elevation="@dimen/_60sdp"
+        android:id="@+id/tab"
+        app:tabTextColor="@color/black2"
+
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicator="@color/black"
+        app:tabIndicatorHeight="@dimen/_2sdp"
+        android:background="@color/white">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/favourite"
+            android:text="Favourites"
+            android:id="@+id/fav">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MY Cart"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:id="@+id/cart">
+
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+    
+    
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/tab"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:id="@+id/pager"/>
+
+</RelativeLayout>

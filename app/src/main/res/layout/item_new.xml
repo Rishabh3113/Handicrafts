@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="@dimen/_30sdp"
+        android:layout_margin="@dimen/_2sdp"
+        android:background="@color/bright">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            android:id="@+id/backed"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/favorite2"
+            android:layout_gravity="end"
+            android:layout_marginLeft="@dimen/_200sdp"
+            android:id="@+id/fav_detail"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_share_24"
+            android:layout_marginLeft="@dimen/_13sdp"
+            android:id="@+id/share"/>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Konkana painting"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:id="@+id/detail_title"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:inputType="textMultiLine"
+
+            android:textColor="@color/black2"
+                android:textSize="@dimen/_25sdp"/>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_images"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/punjab" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_repeatMode="reverse"
+
+                android:layout_gravity="end"
+                android:id="@+id/lottie"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%discount"
+                android:textColor="@color/new_grey"
+                android:textSize="@dimen/_12sdp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="end"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/new_grey"
+                android:id="@+id/detail_discount"
+                android:textSize="@dimen/_12sdp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="@dimen/_55sdp"
+                android:gravity="end"/>
+
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_7sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product information"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/grey3"
+                android:layout_margin="@dimen/_4sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_margin="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item Name"
+
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_17sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:text="pencil holder kfkf jfnrjfn nkfnrnkfn"
+                  android:id="@+id/title2"
+                    android:layout_marginLeft="@dimen/_32sdp"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/_16sdp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grey3"
+                android:layout_margin="@dimen/_4sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_margin="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_17sdp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_currency_rupee_24"
+                    android:layout_marginLeft="@dimen/_73sdp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:text="689"
+                    android:id="@+id/price"
+
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/_16sdp"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grey3"
+                android:layout_margin="@dimen/_4sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_margin="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_17sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:text="pencil holder kfkf jfnrjfn nkfnr"
+                    android:id="@+id/description"
+                    android:layout_marginLeft="@dimen/_29sdp"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/_16sdp"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grey3"
+                android:layout_margin="@dimen/_4sdp"/>
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_margin="@dimen/_4sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:layout_marginLeft="@dimen/_7sdp"
+
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_17sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/state"
+
+                android:text="Arunachal Pradesh"
+
+                android:layout_marginLeft="@dimen/_73sdp"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/_16sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/grey3"
+            android:layout_margin="@dimen/_4sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_margin="@dimen/_4sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:layout_marginLeft="@dimen/_7sdp"
+
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_17sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/city"
+
+                android:text="Arunachal Pradesh"
+
+                android:layout_marginLeft="@dimen/_84sdp"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/_16sdp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/grey3"
+            android:layout_margin="@dimen/_6sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:text="Customer Reviews"
+
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:background="@drawable/style_5"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+
+            android:layout_margin="@dimen/_16sdp"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                 android:layout_marginLeft="@dimen/_27sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_shopping_cart_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Cart"
+                    android:textColor="@color/black2"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="sans-serif-medium"/>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_87sdp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_arrow_circle_right_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Now"
+                    android:textColor="@color/black2"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="sans-serif-medium"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

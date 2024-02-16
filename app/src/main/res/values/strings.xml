@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Handicrafts</string>
+    <string name="arunamchal"><u>
+        Arunachal Handicrafts
+    </u>
+    </string>
+
+    <string name="address">
+        <b>Pick Address On Map</b>
+
+    </string>
+    <string name="spinner_description">Select state</string>
+</resources>

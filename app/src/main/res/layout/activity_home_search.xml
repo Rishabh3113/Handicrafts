@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".home.home_search">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+     android:requiresFadingEdge="horizontal"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@drawable/style7"
+        android:id="@+id/seach_view"
+        android:inputType="text"
+
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/baseline_search_24"
+        android:saveEnabled="true"
+        android:textDirection="inherit"
+
+
+      app:queryHint="Search items"
+
+
+
+
+
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/seach_view"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp" />
+
+
+
+
+</RelativeLayout>

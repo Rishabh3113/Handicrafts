@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bright"
+    android:layout_height="match_parent">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search"
+
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                app:iconifiedByDefault="false"
+
+                app:searchIcon="@drawable/baseline_search_24"
+                app:defaultQueryHint="Search here"
+
+
+
+
+                android:layout_height="wrap_content"
+               android:layout_margin="@dimen/_7sdp"
+                android:background="@drawable/style7"
+
+                app:queryHint="Search Handicrafts here"
+                 />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:background="@drawable/style_5"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+
+
+                android:id="@+id/banner">
+
+            </androidx.viewpager2.widget.ViewPager2>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+
+                android:fontFamily="sans-serif"
+                 android:text="Traditional items"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_9sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grid_love"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:padding="@dimen/_6sdp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_2sdp"
+
+                tools:listitem="@layout/grid_item2" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="sans-serif"
+                android:text="Trending Items"
+
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_7sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grid2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:padding="@dimen/_6sdp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/_2sdp"
+
+                tools:listitem="@layout/grid_item2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/_19sdp"
+                android:text="Customer Reviews"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_4sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reviews"
+                android:background="@drawable/style_5"
+                android:layout_margin="@dimen/_4sdp"
+
+                android:verticalSpacing="@dimen/_7sdp"
+                android:horizontalSpacing="@dimen/_10sdp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

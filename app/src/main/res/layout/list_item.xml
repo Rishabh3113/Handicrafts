@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="@dimen/_40sdp">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/_50sdp"
+
+     android:orientation="horizontal">
+
+     <ImageView
+         android:layout_width="@dimen/_20sdp"
+         android:layout_height="@dimen/_20sdp"
+         android:id="@+id/click"
+         android:layout_marginLeft="@dimen/_8sdp"
+         android:layout_gravity="center"
+
+         android:src="@drawable/baseline_business_24"/>
+
+     <TextView
+         android:layout_width="@dimen/_150sdp"
+         android:layout_height="wrap_content"
+         android:text="About us"
+         android:fontFamily="sans-serif-light"
+         android:layout_marginLeft="@dimen/_20sdp"
+         android:textStyle="normal"
+
+         android:textColor="@color/black"
+         android:id="@+id/list_text"
+
+         android:layout_gravity="center"
+         android:textSize="@dimen/_18sdp"/>
+
+     <ImageView
+         android:layout_width="@dimen/_20sdp"
+         android:layout_height="@dimen/_20sdp"
+         android:layout_gravity="center"
+
+         android:src="@drawable/baseline_arrow_forward_24"
+         android:layout_marginLeft="@dimen/_50sdp"
+         android:id="@+id/clicks"/>
+
+
+
+
+
+
+
+
+ </LinearLayout>
+
+</RelativeLayout>
