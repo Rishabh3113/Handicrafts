@@ -12,16 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.handicrafts.R;
 import com.example.handicrafts.model;
 
 import java.util.ArrayList;
 
 public  class state_adapters extends RecyclerView.Adapter<state_adapters.viewholder> {
-    ArrayList<model> list;
+    ArrayList<models> list;
     Context context;
 
-    public state_adapters(ArrayList<model> list, Context context) {
+    public state_adapters(ArrayList<models> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -29,15 +30,18 @@ public  class state_adapters extends RecyclerView.Adapter<state_adapters.viewhol
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.sexy,parent,false);
         return new viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
-       model model=list.get(position);
-       holder.image.setImageResource(model.getImage());
-       holder.subtitles.setText(model.getSubtitle());
+       models model=list.get(position);
+
+       holder.subtitles.setText(model.getName());
+       holder.price.setText(model.getPrice());
+       holder.discount.setText(model.getDiscount());
+        Glide.with(context).load(model.getImages()).into(holder.image);
 
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -57,7 +61,7 @@ public  class state_adapters extends RecyclerView.Adapter<state_adapters.viewhol
 
     public static class viewholder extends RecyclerView.ViewHolder{
          ImageView image;
-         TextView subtitles;
+         TextView subtitles,discount,price;
          CardView cardView;
 
 
@@ -65,6 +69,8 @@ public  class state_adapters extends RecyclerView.Adapter<state_adapters.viewhol
         public viewholder(@NonNull View itemView) {
             super(itemView);
             image=itemView.findViewById(R.id.images);
+            discount=itemView.findViewById(R.id.discount);
+            price=itemView.findViewById(R.id.price);
             subtitles=itemView.findViewById(R.id.sub);
             cardView=itemView.findViewById(R.id.card);
 

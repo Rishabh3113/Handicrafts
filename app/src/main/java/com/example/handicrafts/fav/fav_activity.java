@@ -62,26 +62,10 @@ public class fav_activity extends Fragment {
 
 
 
-       //String product_id = getArguments().getString("product_id");
 
 
-       /* Bundle args =getArguments();
-        if(args!=null){
-
-            String product_id = args.getString("product_id");
-            if (product_id != null) {
-                fetchdata(product_id);
-                recyclerView.setVisibility(View.VISIBLE);
-            } else {
-                textView.setText("No product ID found");
-                animation = AnimationUtils.loadAnimation(getContext(), R.anim.anim1);
-                textView.startAnimation(animation);
-                animationView.setAnimation(R.raw.lottie_2);
-                animationView.playAnimation();
-            }
 
 
-        }*/
         if (adapter.getItemCount() == 0) {
             // recyclerView.setVisibility(View.INVISIBLE);
 
@@ -112,7 +96,7 @@ public class fav_activity extends Fragment {
 
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         //String product_id = getArguments().getString("product_id");
-        String url = "https://handmadehavens.com/detail.php?product_id=" + product_id; // Replace with your actual PHP API URL
+        String url = "https://handmadehavens.com/detail.php?product_id=" + product_id;
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,

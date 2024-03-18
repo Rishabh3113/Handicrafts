@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import com.example.handicrafts.categories.catFragment;
 import com.example.handicrafts.fav.favFragment;
+import com.example.handicrafts.fav.test_activity;
 import com.example.handicrafts.home.homefragment;
 import com.example.handicrafts.profile.accountFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -43,7 +44,7 @@ public class Home extends AppCompatActivity {
                      case R.id.item2:
 
                          getSupportFragmentManager().beginTransaction()
-                                 .replace(R.id.frame, new favFragment())
+                                 .replace(R.id.frame, new test_activity())
                                  .commit();
                              return  true;
 

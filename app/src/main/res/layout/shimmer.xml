@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="10dp"
+    android:layout_margin="@dimen/_7sdp"
+
     >
 
     <View
@@ -12,7 +12,7 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@color/light"
+        android:background="@color/grey"
         />
 
     <LinearLayout
@@ -26,8 +26,8 @@
             android:layout_width="@dimen/_250sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:background="@color/light" />
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@color/grey" />
 
     </LinearLayout>
 </RelativeLayout>

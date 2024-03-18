@@ -12,12 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/grey"
+        android:background="@color/grey3"
         android:id="@+id/layout_4">
         <ImageButton
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:backgroundTint="@color/grey"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:backgroundTint="@color/grey3"
             android:id="@+id/back"
             android:src="@drawable/baseline_keyboard_arrow_left_24"/>
 
@@ -94,10 +94,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_marginTop="@dimen/_30sdp"
-                android:hint="enter your name"
+                android:hint="Enter your name"
                 app:boxBackgroundMode="outline"
+                android:textColorHint="@color/black"
                 app:boxBackgroundColor="@color/bright"
-                app:hintTextColor="@color/black"
+
 
 
                 >
@@ -124,10 +125,10 @@
                 app:boxBackgroundMode="outline"
 
 
-                android:hint="enter your mail"
+                android:hint="Enter your mail"
 
                 app:boxBackgroundColor="@color/bright"
-                app:hintTextColor="@color/black"
+               android:textColorHint="@color/black"
 
 
                 >

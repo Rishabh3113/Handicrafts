@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/bright"
+    android:background="@color/white"
+    android:id="@+id/relative_5"
     android:layout_height="match_parent">
 
 
@@ -13,6 +14,8 @@
         android:layout_width="match_parent"
         android:id="@+id/scroll"
         android:layout_height="wrap_content">
+
+        
 
 
 
@@ -44,6 +47,8 @@
                 app:queryHint="Search Handicrafts here"
                  />
 
+
+
             <androidx.viewpager2.widget.ViewPager2
                 android:layout_width="match_parent"
                 android:background="@drawable/style_5"
@@ -56,6 +61,35 @@
                 android:id="@+id/banner">
 
             </androidx.viewpager2.widget.ViewPager2>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+
+
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:id="@+id/shimms"
+                app:duration="800">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/layout_load"/>
+                    <include layout="@layout/shimmer_layout"/>
+                    <include layout="@layout/shimmer_layout"/>
+                    <include layout="@layout/layout_load"/>
+
+
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
 
 
             <TextView
@@ -75,6 +109,7 @@
                 android:layout_height="wrap_content"
 
 
+
                 android:padding="@dimen/_6sdp"
                 android:orientation="horizontal"
                 android:layout_margin="@dimen/_2sdp"
@@ -92,7 +127,6 @@
                 android:layout_marginLeft="@dimen/_3sdp"
                 android:textColor="@color/black2"
                 android:layout_marginTop="@dimen/_7sdp"/>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/grid2"
                 android:layout_width="match_parent"
@@ -104,6 +138,8 @@
                 android:layout_margin="@dimen/_2sdp"
 
                 tools:listitem="@layout/grid_item2" />
+
+
 
             <TextView
                 android:layout_width="match_parent"

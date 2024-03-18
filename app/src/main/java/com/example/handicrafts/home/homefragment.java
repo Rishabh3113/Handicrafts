@@ -1,17 +1,25 @@
 package com.example.handicrafts.home;
 
+
+
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.app.AppOpsManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,8 +27,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,6 +38,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.handicrafts.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,24 +51,37 @@ public class homefragment extends Fragment {
     androidx.appcompat.widget.SearchView searchView;
     ViewPager2 viewPager2;
     //use viewpager with a timer
-    GridView gridview2;
+
     RecyclerView recyclerView;
     RecyclerView recyclerView2;
     recycler_adapter adapter2;
 
     home_adapter adapter;
+    RelativeLayout relativeLayout;
      ArrayList<home_data> filteredData;
     ArrayList<home_data> data;
-
+    LottieAnimationView animationView;
+ShimmerFrameLayout frameLayout;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.new_home, null);
+
+        if (!isConnected(getContext())) {
+
+
+
+            showNoInternetDialog();
+        }
+
+
         searchView = view.findViewById(R.id.search);
+        frameLayout=view.findViewById(R.id.shimms);
+        relativeLayout=view.findViewById(R.id.relative_5);
         viewPager2=view.findViewById(R.id.banner);
 
-        //gridview2 = view.findViewById(R.id.grid2);
+
         recyclerView2=view.findViewById(R.id.grid2);
         recyclerView=view.findViewById(R.id.grid_love);
         searchView.setQueryHint("Search Handicrafts Here :)");
@@ -78,33 +102,20 @@ public class homefragment extends Fragment {
         recyclerView2.setLayoutManager(layoutManager2);
         recyclerView2.setAdapter(adapter2);
 
-        //adapter = new home_adapter(getContext(), data);
 
-        //gridview2.setAdapter(adapter);
 
         fetchdata();
 
         filteredData = new ArrayList<>(data);
 
-        /*searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                adapter2.filter(newText);
-                return true;
-            }
-        });
-        */
+
           searchView.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View view) {
                   Intent intent=new Intent(getContext(),home_search.class);
                   startActivity(intent);
-                  //viewPager2.setVisibility(View.INVISIBLE);
+
               }
           });
 
@@ -117,6 +128,7 @@ public class homefragment extends Fragment {
              @Override
              public boolean onQueryTextChange(String newText) {
 
+
                  filter(newText);
                  return true;
              }
@@ -124,6 +136,34 @@ public class homefragment extends Fragment {
         return view;
 
 
+    }
+
+    private void showNoInternetDialog() {
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.no_internet, null);
+        relativeLayout.setVisibility(View.INVISIBLE);
+        animationView=dialogView.findViewById(R.id.no_internet);
+        animationView.setAnimation(R.raw.internet);
+        animationView.playAnimation();
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+
+        dialog.show();
+    }
+
+    private boolean isConnected(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
+            return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        }
+        return false;
     }
 
     private void filter(String newText) {
@@ -139,6 +179,7 @@ public class homefragment extends Fragment {
 
 
     private void fetchdata() {
+            frameLayout.startShimmerAnimation();
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
@@ -187,7 +228,7 @@ public class homefragment extends Fragment {
                         R.drawable.discount
                 );
 
-                //  viewData.setDiscount_logo(R.drawable.discount);
+
                 home_data.setImages(product.getString("images"));
                 home_data.setDiscount(product.getString("discount"));
                 home_data.setName(product.getString("name"));
@@ -203,6 +244,11 @@ public class homefragment extends Fragment {
 
 
                 data.add(home_data);
+                frameLayout.postDelayed(() -> {
+                    frameLayout.stopShimmerAnimation();
+                    frameLayout.setVisibility(View.GONE);
+                    recyclerView2.setVisibility(View.VISIBLE);
+                }, 3000);
             }
             //adapter.notifyDataSetChanged();
             adapter2.notifyDataSetChanged();

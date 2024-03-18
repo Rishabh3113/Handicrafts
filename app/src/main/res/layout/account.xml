@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout_1"
-        android:elevation="@dimen/_100sdp"
+        android:elevation="@dimen/_9sdp"
+
         android:background="@color/white">
         <TextView
             android:layout_width="wrap_content"
@@ -18,7 +19,7 @@
             android:text="Account"
             android:textColor="@color/black"
             android:textSize="@dimen/_25sdp"
-            android:fontFamily="monospace"
+            android:fontFamily="sans-serif-light"
             android:layout_marginLeft="@dimen/_17sdp"/>
     </LinearLayout>
 
@@ -27,11 +28,13 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_146sdp"
         android:layout_below="@id/layout_1"
+
+        android:elevation="@dimen/_100sdp"
         android:layout_marginStart="@dimen/_3sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_3sdp"
         android:layout_marginBottom="@dimen/_3sdp"
-        android:background="@drawable/style"
+      android:background="@drawable/style_5"
         android:orientation="vertical">
 
         <LinearLayout
@@ -39,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_10sdp"
-            android:background="@drawable/style"
+
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -52,7 +55,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/_8sdp"
+                android:layout_margin="@dimen/_7sdp"
 
                 android:orientation="vertical">
 
@@ -60,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_4sdp"
-                    android:fontFamily="monospace"
+                    android:fontFamily="sans-serif"
                     android:text="Welcome!"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_24sdp"
@@ -72,10 +75,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginTop="@dimen/_3sdp"
-                    android:fontFamily="monospace"
-                    android:text="Username"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Rishabh sharma"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_17sdp"
                     android:textStyle="normal" />
 
 
@@ -87,8 +90,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_17sdp"
+            android:layout_marginRight="@dimen/_17sdp"
             android:layout_marginBottom="@dimen/_20sdp"
 
             android:orientation="horizontal">
@@ -148,11 +151,10 @@
     <com.facebook.shimmer.ShimmerFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="13dp"
-        android:layout_margin="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_7sdp"
-        android:layout_marginBottom="@dimen/_7sdp"
+
+
+
+
         android:id="@+id/shimmer"
         app:duration="800"
         android:layout_below="@id/layout_2">
@@ -161,6 +163,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
 
              <include layout="@layout/shimmer"/>
@@ -178,6 +181,7 @@
         android:id="@+id/list_items"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_below="@id/layout_2"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"

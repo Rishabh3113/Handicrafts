@@ -43,11 +43,10 @@ public class accountFragment extends Fragment {
         models.add(new model(R.drawable.baseline_business_24, "Profile pic",R.drawable.baseline_arrow_forward_24));
         models.add(new model(R.drawable.baseline_business_24, "Orders",R.drawable.baseline_arrow_forward_24));
         models.add(new model(R.drawable.baseline_logout_24, "Log out",R.drawable.baseline_arrow_forward_24));
-        // Create custom adapter with the sample data
+
         profile_adapter adapter = new profile_adapter(getContext(), models);
 
 
-        // Set adapter to ListView
         listView.setAdapter(adapter);
         shimmerFrameLayout.postDelayed(() -> {
             shimmerFrameLayout.stopShimmerAnimation();

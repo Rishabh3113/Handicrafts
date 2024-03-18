@@ -26,16 +26,7 @@
                 android:scaleType="center"
                 android:id="@+id/profile_image"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/faviconImageView"
-                android:layout_width="16dp"
-                android:layout_height="20dp"
-                android:layout_margin="@dimen/_2sdp"
-                android:layout_gravity="end"
 
-
-
-                android:src="@drawable/favorite2" />
 
         </FrameLayout>
 

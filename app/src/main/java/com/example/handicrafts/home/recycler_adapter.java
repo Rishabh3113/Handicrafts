@@ -66,29 +66,7 @@ public class recycler_adapter extends RecyclerView.Adapter<recycler_adapter.view
         //grid view and list view have same adapter
 
 
-        holder.view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                view.setBackgroundResource(baseline_favorite_24);
-                Toast.makeText(context, "item added to favorite", Toast.LENGTH_SHORT).show();
-                //fav_activity fragment = new fav_activity();
 
-                // Pass the product ID as arguments to the fragment
-                //Bundle args = new Bundle();
-                //args.putString("product_id", data.getProduct_id());
-               // fragment.setArguments(args);
-
-                // Replace the current fragment with the fav_activity fragment
-
-
-                Intent intent=new Intent(context, fav_activity.class);
-
-                intent.putExtra("product_id",data.getProduct_id());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-
-            }
-        });
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,7 +103,7 @@ public class recycler_adapter extends RecyclerView.Adapter<recycler_adapter.view
         TextView title;
         TextView price;
         TextView discount;
-        CircleImageView view;
+
 
 
 
@@ -135,7 +113,7 @@ public class recycler_adapter extends RecyclerView.Adapter<recycler_adapter.view
             title=itemView.findViewById(R.id.heading);
             price=itemView.findViewById(R.id.price);
             discount=itemView.findViewById(R.id.discount);
-            view=itemView.findViewById(R.id.faviconImageView);
+
 
         }
     }

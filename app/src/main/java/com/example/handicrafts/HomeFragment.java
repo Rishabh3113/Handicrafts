@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         arrayList1.add(new model(R.drawable.arunachal2, "Weaving Craft"));
         arrayList1.add(new model(R.drawable.images, "Weaving Craft"));
         adapter = new adapter(arrayList1, getContext());
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView4.setLayoutManager(layoutManager);
         recyclerView4.setAdapter(adapter);
 

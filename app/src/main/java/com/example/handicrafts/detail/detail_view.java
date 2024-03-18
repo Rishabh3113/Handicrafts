@@ -21,6 +21,7 @@ import com.bumptech.glide.Glide;
 import com.example.handicrafts.R;
 import com.example.handicrafts.categories.data;
 import com.example.handicrafts.fav.fav_activity;
+import com.example.handicrafts.fav.test_activity;
 import com.example.handicrafts.view.view_data;
 
 import org.json.JSONException;
@@ -54,13 +55,7 @@ public class detail_view extends AppCompatActivity {
         animationView = findViewById(R.id.lottie);
         animationView.setAnimation(R.raw.lottie4);
         animationView.playAnimation();
-        fav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-            }
-        });
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,11 +64,32 @@ public class detail_view extends AppCompatActivity {
         });
 
         String product_id = getIntent().getStringExtra("product_id");
+        fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fav.setImageResource(R.drawable.baseline_favorite_24);
+                Toast.makeText(detail_view.this, "pls check favorites !! your item have been added", Toast.LENGTH_SHORT).show();
+
+                test_activity fragment = new test_activity();
+
+                // Create a Bundle and pass the product ID to the fragment
+                Bundle bundle = new Bundle();
+                bundle.putString("product_id", product_id);
+                fragment.setArguments(bundle);
+                getSupportFragmentManager().beginTransaction()
+                        .add(fragment, "test_fragment_tag")
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+
         String url = "https://handmadehavens.com/detail.php?product_id=" + product_id;
 
 
         fetchProductDetail(url);
-    } private void fetchProductDetail(String url) {
+    }
+    private void fetchProductDetail(String url) {
         // Instantiate the RequestQueue
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -121,7 +137,7 @@ public class detail_view extends AppCompatActivity {
                 });
 
 
-       // queue.add(jsonObjectRequest);
+        queue.add(jsonObjectRequest);
     }
 }
 

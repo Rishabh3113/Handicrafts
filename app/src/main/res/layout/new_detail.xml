@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/bright"
+    android:background="@color/white"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
         <LinearLayout
@@ -16,7 +17,7 @@
             android:orientation="horizontal"
             android:elevation="@dimen/_30sdp"
             android:layout_margin="@dimen/_2sdp"
-            android:background="@color/bright">
+            android:background="@color/white">
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
@@ -40,7 +41,7 @@
       <FrameLayout
           android:layout_width="match_parent"
           android:layout_margin="@dimen/_3sdp"
-          android:background="@color/white"
+          android:background="@color/bright"
           android:layout_height="wrap_content">
           <ImageView
               android:layout_width="match_parent"
@@ -84,6 +85,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"

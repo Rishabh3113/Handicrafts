@@ -33,7 +33,20 @@ public class home_data {
             this.discount_logo = discount_logo;
         }
 
-        public int getFav() {
+    public home_data(String product_id, String productImage, String productName, String productPrice, String productDiscount, String productDescription, String productState, String productCity) {
+        this.product_id = product_id;
+        this.images = productImage;
+        this.name = productName;
+        this.price = productPrice;
+        this.discount = productDiscount;
+        this.description = productDescription;
+
+        this.state = productState;
+        this.city = productCity;
+    }
+
+
+    public int getFav() {
             return fav;
         }
 

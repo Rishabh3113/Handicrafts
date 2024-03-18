@@ -6,16 +6,19 @@
 
 
     <TextView
+        android:id="@+id/categories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/categories"
-        android:text="Categories"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center"
-        android:layout_margin="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
         android:fontFamily="sans-serif"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:gravity="center"
+        android:text="Categories"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="normal" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,13 +26,134 @@
         android:layout_below="@+id/categories"
         >
 
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:orientation="horizontal">
+            <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Arunachal Pradesh"
+           android:textSize="@dimen/_23sdp"
+           android:layout_margin="@dimen/_3sdp"
+           android:textColor="@color/black"
+           />
+
+            <ImageView
+                android:id="@+id/dropDownArrow"
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_80sdp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_drop_down_24"/>
+
+
+
+
+        </LinearLayout>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:visibility="gone"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           android:layout_margin="@dimen/_5sdp"
+           android:id="@+id/cat_recycler"
+           />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:text="Nagaland"
+                android:textSize="@dimen/_23sdp"
+                android:layout_margin="@dimen/_3sdp"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/drop2"
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_70sdp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_drop_down_24"/>
+
+
+
+
+        </LinearLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
             android:background="@color/white"
-            android:layout_margin="@dimen/_8sdp"
-            android:id="@+id/cat_recycler"
+            android:layout_margin="@dimen/_5sdp"
+
             />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="@dimen/_3sdp"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="@dimen/_200sdp"
+               android:layout_height="wrap_content"
+               android:text="Andhra Pradesh"
+               android:textSize="@dimen/_23sdp"
+               android:layout_margin="@dimen/_3sdp"
+               android:textColor="@color/black"
+               />
+
+           <ImageView
+
+               android:layout_gravity="center"
+
+               android:layout_marginLeft="@dimen/_70sdp"
+
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/baseline_arrow_drop_down_24"/>
+
+
+
+
+       </LinearLayout>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:visibility="gone"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           android:layout_margin="@dimen/_5sdp"
+
+           />
+
+   </LinearLayout>
+
+
+
 
 
 

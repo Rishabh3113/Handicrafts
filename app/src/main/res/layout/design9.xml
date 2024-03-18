@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+
+    app:cardCornerRadius="@dimen/_7sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:elevation="@dimen/_50sdp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bright"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3sdp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_60sdp"
+
+            android:id="@+id/circle"
+
+            android:layout_height="@dimen/_70sdp"
+
+            android:src="@drawable/punjab"/>
+        <TextView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:text="Nagaland Handicrafts "
+            android:fontFamily="sans-serif-condensed"
+
+            android:id="@+id/state_name"
+            android:layout_gravity="center"
+
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/drop2"
+            android:layout_gravity="center"
+
+
+
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_drop_down_24"/>
+
+
+
+    </LinearLayout>
+
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+
+               tools:listitem="@layout/grid_item2"
+
+               android:id="@+id/views"
+               android:background="@color/bright"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
